@@ -28,4 +28,5 @@ Php::Parameters *__fastcall auth(Php::Parameters *a1, __int64 a2)
 The strcpy call will copy the second argument to the dest buffer, no size checking so this is a clear buffer overflow
 The function will return what's in v7 array which is by default initialized as "21232f297a57a5a743894a0e4a801fc3"
 The space between v7 and dest is ($bp-0x40) - ($bp-0x60) = 0x20 so if we write more than 0x20(32) chars into the dest buffer we can overflow the v7 buffer , thus controlling what's the function is returning .
-Now let's move to the php bug, which is a trivial php type juggling, and since we control $digest value, we can make it equal to magic hash value, and exploit the type juggling vulnerability:
+Now let's move to the php bug, which is a trivial php type juggling, and since we control $digest value, we can make it equal to magic hash value, and exploit the type juggling vulnerability at the [line](https://github.com/DefConUA/HackIT2018/blob/master/web/PeeHPee/index.php#L17):
+Using : http://host/?u=240610708&p=AAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBQNKCDZO
