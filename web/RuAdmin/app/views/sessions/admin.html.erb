@@ -1,0 +1,27 @@
+<div id="legend">
+	<legend class="">Admin Login</legend>
+</div>
+
+<div class="container">
+    <div class="row">
+		<div class="span12">
+<%= form_tag admin_path do %>
+  <div class="control-group">
+    <%= label_tag :username %><br />
+    <%= text_field_tag :username, params[:username] %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </div>
+    <div class="controls"
+       <div class="btn btn-success"><%= submit_tag "Log In" %></div>
+  </div>	
+   <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+<% end %>
+
+	</div>
+	</div>
+</div>

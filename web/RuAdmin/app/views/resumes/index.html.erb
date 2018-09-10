@@ -1,0 +1,34 @@
+<% if !flash[:notice].blank? %>
+   <div class = "alert alert-info">
+      <%= flash[:notice] %>
+   </div>
+<% end %>
+
+<br />
+
+<%= link_to "New Resume", new_resume_path, class: "btn btn-primary" %>
+<%= link_to "logout", logout_path, class: "btn btn-primary" %>
+<br />
+<br />
+
+<table class = "table table-bordered table-striped">
+   <thead>.
+      <tr>
+         <th>Index</th>
+         <th>Full Path</th>
+         <th> </th>
+      </tr>
+   </thead>
+   
+   <tbody>
+      <% @resumes.each_with_index do |path,idx| %>
+         
+         <tr>
+            <td><%= idx %></td>
+            <td><%= path %> </td>
+         </tr>
+         
+      <% end %>
+   </tbody>
+   
+</table>
