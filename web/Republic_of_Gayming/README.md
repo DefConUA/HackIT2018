@@ -3,7 +3,7 @@ The bug is related to prototype pollution in the [line](https://github.com/DefCo
 The general idea behind prototype pollution is when you an expression like : 
 obj[a][b] = value
 
-and user controlling a,b and value
+And user can control a,b and value
 if the users sets "a" to "__proto__" and "b" to any property , he can injects attributes in all existing objects with the value "value"
 for more details check [this](https://github.com/HoLyVieR/prototype-pollution-nsec18)
 
