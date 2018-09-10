@@ -7,7 +7,7 @@ And user can control a,b and value
 if the users sets "a" to "\__proto__" and "b" to any property , he can injects attributes in all existing objects with the value "value"
 for more details check [this](https://github.com/HoLyVieR/prototype-pollution-nsec18)
 
-the script I used is pretty simple, pollute array proto with attribute admintoken and an arbitrary value, then query /admin with the md5 of that value,
+The script I used is pretty simple, pollute array proto with attribute admintoken and an arbitrary value, then query /admin with the md5 of that value,
 Note: At some points lot of teams were changing the __proto__ at the same time so it became like a trivial race condition, but it can be won easy 
 ```python
 import requests
