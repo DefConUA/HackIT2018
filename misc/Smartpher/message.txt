@@ -1,0 +1,10 @@
+Hi Wooble hackers,
+I wrote a super secure message encryption system to secure our communication so that FeeNetwork couldn't get our secret access to the chamber. 
+The code to our secret chamber access code is given below which I generated from our system
+
+tphzqh}v}uivyznwju
+
+I combined blockchain and crypto to make double sure everything is good. I attach you other file, but I was too lazy to finish it though. Also, to access the chamber please decrypt the above access code and wrap with flag{...}
+
+Thanks,
+Wooble Team
